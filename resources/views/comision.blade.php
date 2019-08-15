@@ -29,23 +29,16 @@
               <form class="form-inline py-1">
                   <div class="input-group">
                     <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">Comision</span>
+                    <span class="input-group-text" id="basic-addon1">Com / Prof</span>
                     </div>
-                    <input type="text" id="myInputcomi" onkeyup="filtroComision()" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" id="myInputcomi" onkeyup="filtroComision()" class="form-control mr-3" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-light" onclick="limpiare()">
+                          <i class="fas fa-sync-alt"></i>
+                    </button>
                   </div>
                 </form>
             </div>
-            <div class="col-sm-6 d-flex justify-content-center">
-
-              <form class="form-inline py-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Profesor</span>
-                  </div>
-                  <input type="text" id="myInputprof" onkeyup="filtroProfesor()" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-              </form>
-            </div>
+            
           </div>
 
 
