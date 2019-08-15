@@ -74,7 +74,12 @@
 					</tbody>
 
 				</table>
+              <div id="nohay">
+                 <p id="filtroVacio" class="filtroVacio">
 
+                   NO HAY MATERIAS
+                 </p>
+               </div>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
