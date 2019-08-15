@@ -42,7 +42,7 @@
                     <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Mat / Año</span>
                     </div>
-                    <input type="text" id="myInputmate" onkeyup="filtroMateria()" class="form-control mr-3" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" id="myInputmate" onkeyup="filtroMatAnio()" class="form-control mr-3" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-light" onclick="limpiar()">
                           <i class="fas fa-sync-alt"></i>
                     </button>
@@ -95,8 +95,7 @@
             
             
             
-<script type="text/javascript" src="{{asset('js/filtroMateria.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/filtroAnio.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/filtroMatAnio.js')}}"></script>
 
 <!-- Este script cambia el color de la cabecera - se podría usar un color distinto para cada instituto -->
 <script>

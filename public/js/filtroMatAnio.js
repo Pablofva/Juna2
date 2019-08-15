@@ -1,7 +1,7 @@
 
 resultado=false;
 contenidoN=document.getElementById("nohay");//ID DE TEXTO NO HAY MATERIAS
-function filtroMateria() {
+function filtroMatAnio() {
   var estados=[true];
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInputmate");
