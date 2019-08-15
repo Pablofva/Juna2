@@ -1,12 +1,15 @@
 contenidoMate = document.getElementById('listarMaterias');
+var url1;//variable global
 function materiasAjax(url){
-     console.log(url);
+    url1=url;
+    document.getElementById("myInputmate").value = "";//BORRO EL CONTENIDO DE MATERIAS
     const miajax= new XMLHttpRequest();
-    miajax.open('GET',url,true);
+    // INSTANSIAMOS OBJETO XMLHTTPREQUEST ES EL QUE NOS PERMITE OBTENER ALGO SIN REFRESCAR
+    miajax.open('GET',url,true);//TRUE  PARA QUE SEA ASINCRONO
     miajax.send();
-    miajax.onreadystatechange = function(){
+    miajax.onreadystatechange = function(){//ACCEDEMOS A UNA DE SUS FUNCIONES
         if (this.readyState == 4 && this.status == 200) {
-            
+             // COMPRUEBO LOS ESTADOS (4 TODO A FINALIZADO, 200 TODO OK)
             let datos=JSON.parse(this.responseText);
             console.log(datos);
             // CON ESTA FUNCION LO PROYECTO EN LA TABLA
@@ -34,6 +37,27 @@ function proyeccion (contenido, listaCarreras){
         </td>
         </tr>
         `
+    }
+    contenidoN.style.display = 'none';//OCULTO
+}
+function limpiar(){
+    document.getElementById("myInputmate").value = "";//BORRO EL CONTENIDO DE MATERIAS
+     //console.log(url1);
+    const miajax= new XMLHttpRequest();
+    // INSTANSIAMOS OBJETO XMLHTTPREQUEST ES EL QUE NOS PERMITE OBTENER ALGO SIN REFRESCAR
+    miajax.open('GET',url1,true);//TRUE  PARA QUE SEA ASINCRONO
+    miajax.send();
+    miajax.onreadystatechange = function(){//ACCEDEMOS A UNA DE SUS FUNCIONES
+        if (this.readyState == 4 && this.status == 200) {
+            // COMPRUEBO LOS ESTADOS (4 TODO A FINALIZADO, 200 TODO OK)
+            
+            let datos=JSON.parse(this.responseText);
+            console.log(datos);
+            // CON ESTA FUNCION LO PROYECTO EN LA TABLA
+            proyeccion(contenidoMate,datos);
+            return datos;
+        }
+       
     }
     
 }
