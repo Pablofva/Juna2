@@ -48,10 +48,14 @@ class PagesController extends Controller
         $comisions=Comision::select('comisions.nombre as comision','m.nombre as materia','p.nombre','p.apellido')
         ->join('materias as m','comisions.materia_id','=','m.id')
         ->join('profesors as p','comisions.profesor_id','=','p.id')
+        //->join('inicials as i','comisions.inicial_id','=','i.id')
         ->join('aulas as a','comisions.aula_id','=','a.id')
+        //->join('materias_coms as ma','comisions.comunes_id','=','ma.id')
         ->join('edificios as e','a.edificio_id','=','e.id')
         ->join('sedes as s','e.sede_id','=','s.id')
         ->where('m.id',$id)
+        //->where('i.nombre','')
+        //->where('ma.nombre','')
         ->distinct()
         ->get();
 
@@ -59,9 +63,13 @@ class PagesController extends Controller
         ->join('materias as m','comisions.materia_id','=','m.id')
         ->join('profesors as p','comisions.profesor_id','=','p.id')
         ->join('aulas as a','comisions.aula_id','=','a.id')
+        //->join('inicials as i','comisions.inicial_id','=','i.id')
+        //->join('materias_coms as ma','comisions.comunes_id','=','ma.id')
         ->join('edificios as e','a.edificio_id','=','e.id')
         ->join('sedes as s','e.sede_id','=','s.id')
         ->where('m.id',$id)
+        //->where('i.nombre','')
+        //->where('ma.nombre','')
         ->get();
         //dd($comisions);
         // HACER PAGINA DE AULAS
