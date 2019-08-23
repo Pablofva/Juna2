@@ -15,13 +15,16 @@
   </div>
 </form> -->
 <!-- FILTRO -->
-                      <div class="container py-1">
+                      <div class="py-1">
                         
                         
                           <nav class="nav justify-content-start">
                                 <!-- <a class="nav-link active" href="#">Materias Comunes</a> -->
-                                <button type="button" class="btn btn-danger btn-circle btn-xl" data-toggle="modal" data-target="#Informatica" onclick="materiasComunesAjax('{{route('materiasComunes',$idCarrera)}}')">Comunes</i>
-                                                            </button>
+                                <!-- <button type="button" class="btn btn-danger btn-circle btn-xl" data-toggle="modal" data-target="#Informatica" onclick="materiasComunesAjax('{{route('materiasComunes',$idCarrera)}}')">Comunes</i>
+                                                            </button> -->
+                                                            <a href="" class="btn btn-ingenieria botones-inicio" id="" data-toggle="modal" data-target="#Informatica" onclick="materiasComunesAjax('{{route('materiasComunes',$idCarrera)}}')">
+                                                           Comunes
+                                                             </a>
                               </nav>
                           
                         
