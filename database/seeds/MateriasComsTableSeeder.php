@@ -14,31 +14,38 @@ class MateriasComsTableSeeder extends Seeder
     {
         MateriasCom::create([
             'nombre' => 'Matematica I',
-            'instituto_id' => 1
+            'instituto_id' => 1,
+            'anio' => 1
         ]);
         MateriasCom::create([
             'nombre' => 'Matematica II',
-            'instituto_id' => 1
+            'instituto_id' => 1,
+            'anio' => 2
         ]);
         MateriasCom::create([
             'nombre' => 'Matematica III',
-            'instituto_id' => 1
+            'instituto_id' => 1,
+            'anio' => 2
         ]);
         MateriasCom::create([
             'nombre' => 'Fisica I',
-            'instituto_id' => 1
+            'instituto_id' => 1,
+            'anio' => 2
         ]);
         MateriasCom::create([
             'nombre' => 'Fisica II',
-            'instituto_id' => 1
+            'instituto_id' => 1,
+            'anio' => 3
         ]);
         MateriasCom::create([
             'nombre' => 'Quimica General',
-            'instituto_id' => 1
+            'instituto_id' => 1,
+            'anio' => 3
         ]);
         MateriasCom::create([
             'nombre' => 'Probabilidad y Estadistica',
-            'instituto_id' => 1
+            'instituto_id' => 1,
+            'anio' => 3
         ]);
         
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Carrera;
 use App\Materia;
 use App\Comision;
+use App\MateriasCom;
 
 class PagesController extends Controller
 {
@@ -32,10 +33,15 @@ class PagesController extends Controller
     public function carreras($id = null)
     {
         $carreras = Carrera::where('instituto_id', $id)->get();
-
-        return view('carreras', compact('carreras'));
+        $idCarrera=$id;
+        return view('carreras', compact('carreras'),compact('idCarrera'));
     }
+    public function materiasComunes($id = null)
+    {
+        $materias = MateriasCom::where('instituto_id', $id)->get();
 
+        return $materias;
+    }
     public function materias($id = null)
     {
         $materias = Materia::where('carrera_id', $id)->get();

@@ -18,6 +18,7 @@ class CreateMateriasComsTable extends Migration
             $table->UnsignedInteger('instituto_id');
             $table->foreign('instituto_id')->references('id')->on('institutos');
             $table->string('nombre');
+            $table->integer('anio');
             $table->timestamps();
         });
     }
