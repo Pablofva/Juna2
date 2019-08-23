@@ -28,3 +28,5 @@ Route::get('/materias/{id?}', 'PagesController@materias')->name('materias');
 Route::get('/materiasComunes/{id?}', 'PagesController@materiasComunes')->name('materiasComunes');
 
 Route::get('/listarComisiones/{id?}', 'PagesController@listarComisiones')->name('listarComisiones');
+
+Route::get('/listarComisionesComunes/{id?}', 'PagesController@listarComisionesComunes')->name('listarComisionesComunes');

@@ -20,7 +20,7 @@
                         
                           <nav class="nav justify-content-start">
                                 <!-- <a class="nav-link active" href="#">Materias Comunes</a> -->
-                                <button type="button" class="btn btn-danger btn-circle btn-xl" data-toggle="modal" data-target="#Informatica" onclick="materiasAjax('{{route('materiasComunes',$idCarrera)}}')">Comunes</i>
+                                <button type="button" class="btn btn-danger btn-circle btn-xl" data-toggle="modal" data-target="#Informatica" onclick="materiasComunesAjax('{{route('materiasComunes',$idCarrera)}}')">Comunes</i>
                                                             </button>
                               </nav>
                           
@@ -110,7 +110,7 @@
             
             
 <script type="text/javascript" src="{{asset('js/filtroMatAnio.js')}}"></script>
-
+<script type="text/javascript" src="{{asset('js/popupMateriasComunes.js')}}"></script>
 <!-- Este script cambia el color de la cabecera - se podría usar un color distinto para cada instituto -->
 <script>
   var selector = {{$carreras[0]->instituto_id}};
