@@ -19,7 +19,7 @@ $factory->define(Comisioncomun::class, function (Faker $faker) {
         'horario' => array_random($horarios),
         'dia' => array_random($dias),
         'profesor_id' => $faker->numberBetween(1, 4),
-        'materiacomun_id' => $faker->numberBetween(1, 7),
+        'materiacomun_id' => $faker->numberBetween(1, 14),
         'aula_id' => $faker->numberBetween(1, 79),
     ];
 });

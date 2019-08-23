@@ -47,7 +47,40 @@ class MateriasComsTableSeeder extends Seeder
             'instituto_id' => 1,
             'anio' => 3
         ]);
-        
-
+        MateriasCom::create([
+            'nombre' => 'Psicologia',
+            'instituto_id' => 2,
+            'anio' => 1
+        ]);
+        MateriasCom::create([
+            'nombre' => 'Epidemiologia',
+            'instituto_id' => 2,
+            'anio' => 1
+        ]);
+        MateriasCom::create([
+            'nombre' => 'Metodologia',
+            'instituto_id' => 2,
+            'anio' => 1
+        ]); 
+        MateriasCom::create([
+            'nombre' => 'Informacion aplicada',
+            'instituto_id' => 2,
+            'anio' => 1
+        ]);   
+        MateriasCom::create([
+            'nombre' => 'Organizacion y servicios',
+            'instituto_id' => 2,
+            'anio' => 1
+        ]); 
+        MateriasCom::create([
+            'nombre' => 'Psi',
+            'instituto_id' => 2,
+            'anio' => 1
+        ]);
+        MateriasCom::create([
+            'nombre' => 'gia',
+            'instituto_id' => 2,
+            'anio' => 1
+        ]);
     }
 }

@@ -12,6 +12,6 @@ class ComisionsComunesTableSeeder extends Seeder
      */
     public function run()
     {
-        $factory = factory(Comisioncomun::class,50)->create();
+        $factory = factory(Comisioncomun::class,150)->create();
     }
 }
