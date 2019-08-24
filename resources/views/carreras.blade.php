@@ -22,7 +22,7 @@
                                 <!-- <a class="nav-link active" href="#">Materias Comunes</a> -->
                                 <!-- <button type="button" class="btn btn-danger btn-circle btn-xl" data-toggle="modal" data-target="#Informatica" onclick="materiasComunesAjax('{{route('materiasComunes',$idCarrera)}}')">Comunes</i>
                                                             </button> -->
-                                                            <a href="" class="btn btn-ingenieria botones-inicio" id="" data-toggle="modal" data-target="#Informatica" onclick="materiasComunesAjax('{{route('materiasComunes',$idCarrera)}}')">
+                                                            <a href="" class="btn botones-inicio" id="" data-toggle="modal" data-target="#Informatica" onclick="materiasComunesAjax('{{route('materiasComunes',$idCarrera)}}')">
                                                            Comunes
                                                              </a>
                               </nav>
@@ -34,7 +34,7 @@
     <div class="row">
         @foreach ($carreras as $item)
         <div class="col-md-6">
-            <a href="" class="btn btn-ingenieria botones-inicio" id="" data-toggle="modal" data-target="#Informatica" onclick="materiasAjax('{{route('materias',$item->id)}}')">
+            <a href="" class="btn botones-inicio" id="" data-toggle="modal" data-target="#Informatica" onclick="materiasAjax('{{route('materias',$item->id)}}')">
                     {{$item->nombre}}
                 </a>
                 
@@ -117,14 +117,23 @@
 <!-- Este script cambia el color de la cabecera - se podría usar un color distinto para cada instituto -->
 <script>
   var selector = {{$carreras[0]->instituto_id}};
+  var elemento = document.getElementsByClassName("botones-inicio");
   if(selector == 1){
       document.getElementById("fondo-cabecera").style.backgroundColor = "#A63321";
+      for(var i = 0; i < elemento.length; i++)
+        elemento[i].className += " btn-ingenieria";
   }else if(selector == 2){
       document.getElementById("fondo-cabecera").style.backgroundColor = "#8AB03F";
+      for(var i = 0; i < elemento.length; i++)
+        elemento[i].className += " btn-salud";
   }else if(selector == 3){
       document.getElementById("fondo-cabecera").style.backgroundColor = "#283B8A";
+      for(var i = 0; i < elemento.length; i++)
+        elemento[i].className += " btn-sociales";
   }else if(selector == 4){
       document.getElementById("fondo-cabecera").style.backgroundColor = "#F39231";
+      for(var i = 0; i < elemento.length; i++)
+        elemento[i].className += " btn-iniciales";
   }
 </script>
 
