@@ -5,7 +5,7 @@
 
 
 <!-- KKKK -->
-<h1 class="letra-titulo py-1"><strong>Seleccione la carrera</strong></h1>
+<h1 class="letra-titulo pt-4 pb-3"><strong>Seleccione la carrera</strong></h1>
 <!-- <form class="form-inline py-1">
   <div class="input-group">
     <div class="input-group-prepend">
@@ -120,9 +120,9 @@
   if(selector == 1){
       document.getElementById("fondo-cabecera").style.backgroundColor = "#A63321";
   }else if(selector == 2){
-      document.getElementById("fondo-cabecera").style.backgroundColor = "#283B8A";
-  }else if(selector == 3){
       document.getElementById("fondo-cabecera").style.backgroundColor = "#8AB03F";
+  }else if(selector == 3){
+      document.getElementById("fondo-cabecera").style.backgroundColor = "#283B8A";
   }else if(selector == 4){
       document.getElementById("fondo-cabecera").style.backgroundColor = "#F39231";
   }
