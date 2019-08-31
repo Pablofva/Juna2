@@ -7,6 +7,8 @@ use App\Carrera;
 use App\Materia;
 use App\Comision;
 use App\Comisioncomun;
+use App\Comisioninicial;
+use App\Inicial;
 use App\MateriasCom;
 
 class PagesController extends Controller
@@ -21,6 +23,9 @@ class PagesController extends Controller
 
     public function aulas(){
         return view('aulas');
+    }
+    public function iniciales(){
+        return view('paginaIniciales');
     }
 
     public function mapas(){
@@ -40,6 +45,13 @@ class PagesController extends Controller
     public function materiasComunes($id = null)
     {
         $materias = MateriasCom::where('instituto_id', $id)->get();
+
+        return $materias;
+    }
+
+    public function materiasIniciales()
+    {
+        $materias = Inicial::all();
 
         return $materias;
     }
@@ -104,6 +116,40 @@ class PagesController extends Controller
         ->join('materias_coms as m','comisioncomuns.materiacomun_id','=','m.id')
         ->join('profesors as p','comisioncomuns.profesor_id','=','p.id')
         ->join('aulas as a','comisioncomuns.aula_id','=','a.id')
+        //->join('inicials as i','comisions.inicial_id','=','i.id')
+        //->join('materias_coms as ma','comisions.comunes_id','=','ma.id')
+        ->join('edificios as e','a.edificio_id','=','e.id')
+        ->join('sedes as s','e.sede_id','=','s.id')
+        ->where('m.id',$id)
+        //->where('i.nombre','')
+        //->where('ma.nombre','')
+        ->get();
+        //dd($comisions);
+        // HACER PAGINA DE AULAS
+        return view('comision',compact('comisions','copia'));
+    }
+
+    public function listarComisionesIniciales($id = null)
+    {
+        //$comisions = Comision::where('materia_id', $id)->get();
+        $comisions=Comisioninicial::select('comisioninicials.nombre as comision','m.nombre as materia','p.nombre','p.apellido')
+        ->join('inicials as m','comisioninicials.materiainicial_id','=','m.id')
+        ->join('profesors as p','comisioninicials.profesor_id','=','p.id')
+        //->join('inicials as i','comisions.inicial_id','=','i.id')
+        ->join('aulas as a','comisioninicials.aula_id','=','a.id')
+        //->join('materias_coms as ma','comisions.comunes_id','=','ma.id')
+        ->join('edificios as e','a.edificio_id','=','e.id')
+        ->join('sedes as s','e.sede_id','=','s.id')
+        ->where('m.id',$id)
+        //->where('i.nombre','')
+        //->where('ma.nombre','')
+        ->distinct()
+        ->get();
+
+        $copia=Comisioninicial::select('comisioninicials.nombre as comision','comisioninicials.horario as horario','comisioninicials.dia as dia','m.nombre as materia','a.numero as aula','a.piso as piso','p.nombre','p.apellido','e.nombre as edificio','s.nombre as sede','s.calleynum as direccion','e.id as edificioId','e.imagen as imagen')
+        ->join('inicials as m','comisioninicials.materiainicial_id','=','m.id')
+        ->join('profesors as p','comisioninicials.profesor_id','=','p.id')
+        ->join('aulas as a','comisioninicials.aula_id','=','a.id')
         //->join('inicials as i','comisions.inicial_id','=','i.id')
         //->join('materias_coms as ma','comisions.comunes_id','=','ma.id')
         ->join('edificios as e','a.edificio_id','=','e.id')

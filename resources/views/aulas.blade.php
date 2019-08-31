@@ -21,7 +21,7 @@
         </a>
     </div>
     <div class="col-md-6">
-        <a href="" class="btn btn-iniciales botones-inicio">
+        <a href="{{ Route('iniciales') }}" class="btn btn-iniciales botones-inicio">
             Estudios Iniciales
         </a>
     </div>
