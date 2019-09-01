@@ -1,11 +1,10 @@
 html{
-  min-height: 100%;
+  height: 100%;
   position: relative;
 }
 
 body {
     margin: 0;
-    margin-bottom: 100px;
 	  background-image: url("../img/fondo.jpg");
 	  background-repeat: no-repeat;
 	  background-position: center;
@@ -18,8 +17,7 @@ body {
 
 .fondo-contenido{
     background-color: rgba(256, 256, 256, .8);
-    padding-bottom: 100px;
-    height: 80vh;
+    min-height: 85vh;
 }
 .botonComunes{
   height: 80px;

@@ -45,7 +45,7 @@
           
                   
                   <!-- COMIENZO DE LISTA DE COMISIONES -->
-<div class="container">
+<div class="container pb-3">
     <ul id="myULcomi" class="lista">
         @foreach($comisions as $item)
             <li>

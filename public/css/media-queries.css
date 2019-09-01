@@ -56,15 +56,3 @@
 }
   
 /* ---- MEDIA QUERIES - RESPONSIVE -- solución a pantallas cuadradas---- */
-  
-@media screen and (max-width: 767px){
-    .fondo-contenido{
-      height: 100%;
-    }
-}
-
-@media screen and (max-height: 850px){
-    .fondo-contenido{
-      height: 100%;
-    }
-}

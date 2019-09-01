@@ -15,8 +15,8 @@
   </div>
 </form> -->
 <!-- FILTRO -->
-                      <div class="py-1">
-                        
+                      <div class="row py-1">
+                        <div class="col-md">
                         
                           <nav class="nav justify-content-start">
                                 <!-- <a class="nav-link active" href="#">Materias Comunes</a> -->
@@ -26,8 +26,7 @@
                                                            Comunes
                                                              </a>
                               </nav>
-                          
-                        
+                        </div>    
                       </div>
 
   
@@ -41,7 +40,7 @@
 
               </div>
               @endforeach
-            </div>
+    </div>
             </div>
   
             <!-- MODAL -->
