@@ -12,7 +12,7 @@
 .btn-mapas.active, 
 .open .dropdown-toggle.btn-mapas { 
     color: #ffffff; 
-    background-color: #AD1111; 
+    background-color: rgba(201, 69, 69, 0.5); 
     border-color: #C94545; 
 } 
    
@@ -29,8 +29,8 @@
   
 .btn-libros { 
     color: #ffffff; 
-    background-color: #9EDB3B; 
-    border-color: #9EDB3B; 
+    background-color: #6EA21B; 
+    border-color: #6EA21B; 
 } 
      
 .btn-libros:hover, 
@@ -39,8 +39,8 @@
 .btn-libros.active, 
 .open .dropdown-toggle.btn-libros { 
     color: #ffffff; 
-    background-color: #68A800; 
-    border-color: #9EDB3B; 
+    background-color: rgba(110, 162, 27, 0.5); 
+    border-color: #6EA21B; 
 } 
      
 .btn-libros:active, 
@@ -50,7 +50,7 @@
 } 
      
 .btn-libros .badge { 
-    color: #9EDB3B; 
+    color: #6EA21B; 
     background-color: #ffffff; 
 }
   
@@ -67,7 +67,7 @@
 .btn-aulas.active, 
 .open .dropdown-toggle.btn-aulas { 
     color: #ffffff; 
-    background-color: #0753D6; 
+    background-color: rgba(59, 118, 219, 0.5); 
     border-color: #3B76DB; 
 } 
      
@@ -85,8 +85,8 @@
   
 .btn-oficinas { 
     color: #ffffff; 
-    background-color: #3BD6DB; 
-    border-color: #3BD6DB; 
+    background-color: #0BA8C1; 
+    border-color: #0BA8C1; 
 } 
      
 .btn-oficinas:hover, 
@@ -95,8 +95,8 @@
 .btn-oficinas.active, 
 .open .dropdown-toggle.btn-oficinas { 
     color: #ffffff; 
-    background-color: #00C0C7; 
-    border-color: #3BD6DB; 
+    background-color: rgba(11, 169, 193, 0.555); 
+    border-color: #0BA8C1; 
 } 
      
 .btn-oficinas:active, 
@@ -106,7 +106,7 @@
 }
      
 .btn-oficinas .badge { 
-    color: #3BD6DB; 
+    color: #0BA8C1; 
     background-color: #ffffff; 
 }
   
